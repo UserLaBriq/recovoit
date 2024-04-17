@@ -1,0 +1,18 @@
+IMAGE PROCESSED AND CROPPED : 69/943.
+        -->image name : "peugeot208leboncoin160.jpeg".
+
+IMAGE PROCESSED AND CROPPED : 70/943.
+        -->image name : "peugeot208leboncoin161.jpeg".
+
+Traceback (most recent call last):
+  File "C:\Users\anste\OneDrive\Bureau\AI_1\crop_test_1\YOLOV3_detector_CROP.py", line 47, in <module>
+    box_points = detection_voiture(detector,input_path_image,output_path_image)
+  File "C:\Users\anste\OneDrive\Bureau\AI_1\crop_test_1\YOLOV3_detector_CROP.py", line 18, in detection_voiture
+    detections = detector.detectObjectsFromImage(input_image=input_path, output_image_path=output_path, minimum_percentage_probability=30) #probabilité d'être une voiture >30%
+  File "C:\Users\anste\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\imageai\Detection\__init__.py", line 338, in detectObjectsFromImage
+    fnames, original_imgs, input_dims, imgs = self.__load_image_yolo(input_image)
+  File "C:\Users\anste\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\imageai\Detection\__init__.py", line 99, in __load_image_yolo
+    img_h, img_w, _ = img.shape
+UnboundLocalError: local variable 'img' referenced before assignment
+
+C:\Users\anste\OneDrive\Bureau\AI_1\crop_test_1>
