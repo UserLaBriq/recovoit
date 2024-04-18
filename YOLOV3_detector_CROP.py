@@ -1,5 +1,3 @@
-##Source : https://stackabuse.com/object-detection-with-imageai-in-python/
-
 from imageai.Detection import ObjectDetection
 import os
 
