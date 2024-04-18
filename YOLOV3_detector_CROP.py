@@ -5,16 +5,16 @@ import os
 
 from PIL import Image
 
-#rogne l'image source (input_path) avec les contours (box) pour la sauvegarder vers l'image destination (output_path)
+#crop sourcepicture (input_path) around the box and save it in (output_path)
 def image_croper(box,input_path,output_path_cropped_image):
     im = Image.open(input_path)
     im1 = im.crop((box[0], box[1], box[2], box[3]))
     im1 = im1.save(output_path_cropped_image) 
 
-#Renvoie les contours autour de la voiture detectée et sauvegarde l'image de la voiture avec les contours :
+#Return box outlines around detected car and save original picture of car with box around 
 def detection_voiture(detector, input_path, output_path):
     try :
-        detections = detector.detectObjectsFromImage(input_image=input_path, output_image_path=output_path, minimum_percentage_probability=30) #probabilité d'être une voiture >30%
+        detections = detector.detectObjectsFromImage(input_image=input_path, output_image_path=output_path, minimum_percentage_probability=30) #probability of being a car >30%
         for eachObject in detections:
                 #print(eachObject["name"] , " : ", eachObject["percentage_probability"], " : ", eachObject["box_points"] )
                 #print("--------------------------------")
